@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MT940 Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="/path/to/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <!-- Vue app container -->
+      <h1 class="title">MT940 Generator</h1>
+      <!-- Title of the app -->
+      <div class="copy">
+        <h2>Introducing the MT940 Converter: A Powerful and Efficient JSON to MT940 Conversion Tool</h2>
+        <p> Are you in need of a reliable and efficient way to convert JSON formatted bank transaction data into the MT940 format? Look no further! Our powerful MT940 Converter script is designed to make your life easier and save you time when dealing with financial data.</p>
+        <p> The MT940 Converter is a user-friendly solution that automatically processes JSON data and generates an MT940 formatted file. This script is perfect for businesses and individuals who need to convert their JSON transaction data to MT940 for seamless bank reconciliation or other financial purposes. </p>
+        <p> Key Features: </p>
+        <ol>
+          <li>Simple File Upload: Just upload your JSON file, and the MT940 Converter will handle the rest.</li>
+          <li>Group Transactions by Date: The script intelligently groups transactions by date, ensuring your MT940 file is organized and easy to read.</li>
+          <li>MT940 Content Generation: The converter processes JSON data and generates MT940 content, including opening and closing balance lines, transaction lines, and transaction descriptions.</li>
+          <li>Downloadable Output: Once the conversion is complete, you can easily download the MT940 file (.sta) for your records or further processing.</li>
+          <li>Streamlined Financial Management: Converting your JSON transaction data to the widely accepted MT940 format allows for more efficient bank reconciliation and financial reporting.</li>
+          <li>Error Reduction: Automated conversion minimizes the chance of errors, ensuring accurate and reliable financial data.</li>
+          <li>Easy Integration: The script is built using the popular Vue.js framework, making it easy to integrate with your existing applications or projects.</li>
+        </ol>
+        <p> Let the MT940 Converter take care of your JSON to MT940 conversion needs and help you maintain an organized and efficient financial management system. Try the MT940 Converter today and see the difference! </p>
+        <section>
+          <h2>Upload JSON File</h2>
+          <!-- File input section -->
+          <div class="input-container">
+            <label for="json-file" class="input-label">Upload JSON File:</label>
+            <input type="file" @change="onFileUpload($event)" />
+          </div>
+          <!-- Buttons section -->
+          <div class="button-container">
+            <button @click="generateMT940" class="generate-button">Generate MT940</button>
+            <!-- Button to generate MT940 -->
+            <button @click="downloadMT940" class="download-button" :disabled="!mt940">Download .sta</button>
+            <!-- Button to download MT940 as .sta file -->
+          </div>
+          <!-- Output section -->
+          <div v-if="mt940" class="output-container">
+            <h2 class="output-title">MT940 Output:</h2>
+            <pre class="output-content">{{ mt940 }}</pre>
+            <!-- Display the generated MT940 content -->
+          </div>
+      </div>
+      </section>
+      <section>
+        <h2>Example Input</h2>
+        <pre>
+                                    <code>
+[
+ {
+  "Buchung": "28.03.2023",
+  "Wertstellung": "28.03.2023",
+  "Verwendungszweck": "AMAZON PAYMENTS EUROPE S.C.",
+  "IBAN": "DE34123500050001234567",
+  "Kontonummer": "1234567",
+  "Bankleitzahl": "123500050",
+  "Bank": "Stadtsparkasse Wuppertal",
+  "Anfangsbestand": 169.18,
+  "Betrag": -134.95,
+  "Endbetrag": 34.23,
+  "Currency": "EUR"
+ },
+ {
+  "Buchung": "28.03.2023",
+  "Wertstellung": "28.03.2023",
+  "Verwendungszweck": "WSW ENERGIE   WASSER AG B 8438952391 VK 3010764557 FRIEDRICH-ENGELS-ALLEE 321 ABS 28.03.23 BETRAG 82.08 EUR",
+  "IBAN": "DE34123500050001234567",
+  "Kontonummer": "1234567",
+  "Bankleitzahl": "123500050",
+  "Bank": "Stadtsparkasse Wuppertal",
+  "Anfangsbestand": 34.23,
+  "Betrag": -82.08,
+  "Endbetrag": -47.85,
+  "Currency": "EUR"
+ },
+ {
+  "Buchung": "28.03.2023",
+  "Wertstellung": "28.03.2023",
+  "Verwendungszweck": "WSW ENERGIE   WASSER AG B 8378776688 VK 3010526428 FRIEDRICH-ENGELS-ALLEE 321 ABS 28.03.23 BETRAG 60.79 EUR",
+  "IBAN": "DE34123500050001234567",
+  "Kontonummer": "1234567",
+  "Bankleitzahl": "123500050",
+  "Bank": "Stadtsparkasse Wuppertal",
+  "Anfangsbestand": -47.85,
+  "Betrag": -60.79,
+  "Endbetrag": -108.64,
+  "Currency": "EUR"
+ },
+]        
+    </code>
+                                </pre>
+      </section>
+    </div>
+    <!-- Import Vue 3 from CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- Link to the external JavaScript file -->
+    <script src="js/v2.0.6.js"></script>
+  </body>
+</html>

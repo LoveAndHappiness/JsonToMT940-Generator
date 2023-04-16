@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.input-container,
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input-label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.input-file {
+    margin-bottom: 1rem;
+}
+
+.generate-button,
+.download-button {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.generate-button:hover,
+.download-button:hover {
+    background-color: #555;
+}
+
+.download-button:disabled {
+    background-color: #ccc;
+    cursor: default;
+}
+
+.output-container {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.output-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.output-content {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
