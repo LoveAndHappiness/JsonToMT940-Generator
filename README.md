@@ -17,3 +17,47 @@ The MT940 Converter is a user-friendly solution that automatically processes JSO
 
 Let the MT940 Converter take care of your JSON to MT940 conversion needs and help you maintain an organized and efficient financial management system. Try the MT940 Converter today and see the difference!
 
+
+## Example Input JSON
+```json
+[
+ {
+  "Buchung": "28.03.2023",
+  "Wertstellung": "28.03.2023",
+  "Verwendungszweck": "AMAZON PAYMENTS EUROPE S.C.",
+  "IBAN": "DE34123500050001234567",
+  "Kontonummer": "1234567",
+  "Bankleitzahl": "123500050",
+  "Bank": "Stadtsparkasse Wuppertal",
+  "Anfangsbestand": 169.18,
+  "Betrag": -134.95,
+  "Endbetrag": 34.23,
+  "Currency": "EUR"
+ },
+ {
+  "Buchung": "28.03.2023",
+  "Wertstellung": "28.03.2023",
+  "Verwendungszweck": "WSW ENERGIE   WASSER AG B 8438952391 VK 3010764557 FRIEDRICH-ENGELS-ALLEE 321 ABS 28.03.23 BETRAG 82.08 EUR",
+  "IBAN": "DE34123500050001234567",
+  "Kontonummer": "1234567",
+  "Bankleitzahl": "123500050",
+  "Bank": "Stadtsparkasse Wuppertal",
+  "Anfangsbestand": 34.23,
+  "Betrag": -82.08,
+  "Endbetrag": -47.85,
+  "Currency": "EUR"
+ },
+ {
+  "Buchung": "28.03.2023",
+  "Wertstellung": "28.03.2023",
+  "Verwendungszweck": "WSW ENERGIE   WASSER AG B 8378776688 VK 3010526428 FRIEDRICH-ENGELS-ALLEE 321 ABS 28.03.23 BETRAG 60.79 EUR",
+  "IBAN": "DE34123500050001234567",
+  "Kontonummer": "1234567",
+  "Bankleitzahl": "123500050",
+  "Bank": "Stadtsparkasse Wuppertal",
+  "Anfangsbestand": -47.85,
+  "Betrag": -60.79,
+  "Endbetrag": -108.64,
+  "Currency": "EUR"
+ }
+]
